@@ -13,7 +13,6 @@ def df_build_summary_stats(list_vals):
             df_min(list_vals),
             df_mean(list_vals),
             df_median(list_vals),
-            df_deviation(list_vals),
             df_mean(list_vals) + df_deviation(list_vals),
             df_mean(list_vals) - df_deviation(list_vals),
             df_percentile(list_vals, 75),
@@ -28,11 +27,11 @@ def df_print_summary_stats(list_vals, show_values=True):
     print("Max:", stats[0])
     print("Min:", stats[1])
     print("Mean:", stats[2])
-    print("Median", stats[3])
-    print("S-Dev + Mean", stats[4])
-    print("S-Dev - Mean", stats[5])
-    print("75th Percentile", stats[6])
-    print("25th Percentile", stats[7])
+    print("Median:", stats[3])
+    print("S-Dev + Mean:", stats[4])
+    print("S-Dev - Mean:", stats[5])
+    print("75th Percentile:", stats[6])
+    print("25th Percentile:", stats[7])
 
 
 def df_max(list_vals):
@@ -95,7 +94,6 @@ def df_median(list_vals):
 
 
 def df_percentile(list_vals, percent=None):
-    print('hi')
     if not list_vals:
         return None
     elif not percent:
